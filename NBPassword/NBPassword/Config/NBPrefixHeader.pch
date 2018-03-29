@@ -1,0 +1,20 @@
+//
+//  NBPrefixHeader.pch
+//  NBPassword
+//
+//  Created by SBD on 2018/3/28.
+//  Copyright © 2018年 An. All rights reserved.
+//
+
+#ifndef NBPrefixHeader_pch
+#define NBPrefixHeader_pch
+
+#import "NBCommonDefine.h"
+#import "UIColor+NBPasswordColor.h"
+#import "UIButton+EnlargeTouchArea.h"
+#import <Masonry.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* NBPrefixHeader_pch */
