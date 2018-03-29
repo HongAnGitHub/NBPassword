@@ -22,7 +22,7 @@ UITableViewDataSource
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.titleLabel.text = @"设置";
+    self.customTitle = @"设置";
 //    self.navigationItem.title = @"设置";
     self.dataArray = @[
                        @{@"安全":@[@"启用Touch ID",@"清空剪切板",@"修改主密码",@"入侵拍照"]},

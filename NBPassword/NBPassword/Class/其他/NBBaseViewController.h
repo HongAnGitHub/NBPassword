@@ -11,7 +11,11 @@
 
 @interface NBBaseViewController : UIViewController
 
-@property (nonatomic, copy) UILabel *titleLabel;
+/* 自定义导航title样式
+ * 
+ */
+@property (nonatomic, copy) NSString *customTitle;
+
 
 @property (nonatomic,strong) UIImageView *navbarAnimView;
 

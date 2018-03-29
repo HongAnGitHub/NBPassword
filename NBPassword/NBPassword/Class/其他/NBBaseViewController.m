@@ -14,6 +14,7 @@
 @interface NBBaseViewController (){
     UIActivityIndicatorView *detailLoadingView;
 }
+@property (nonatomic, copy) UILabel *titleLabel;
 @end
 
 @implementation NBBaseViewController
@@ -70,11 +71,7 @@
     self.extendedLayoutIncludesOpaqueBars = NO;
     self.modalPresentationCapturesStatusBarAppearance = NO;
     
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
-    _titleLabel.font = FONT_SIZE(16);
-    _titleLabel.textColor = [UIColor NBPasswordColorWithString:@"606069"];
-    _titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.navigationItem.titleView = _titleLabel;
+    
 }
 
 
@@ -86,6 +83,16 @@
 
 #pragma mark - private Methods
 
+- (void)setCustomTitle:(NSString *)customTitle
+{
+    _customTitle = customTitle;
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    _titleLabel.font = FONT_SIZE(16);
+    _titleLabel.textColor = [UIColor NBPasswordColorWithString:@"606069"];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.text = customTitle;
+    self.navigationItem.titleView = _titleLabel;
+}
 
 /**
  *  初始化加载View
@@ -106,9 +113,7 @@
         make.centerX.equalTo(view);
         make.centerY.equalTo(view).offset(-marginCenterY);
     }];
-    
 }
-
 
 /**
  *  显示LoadingView动画
